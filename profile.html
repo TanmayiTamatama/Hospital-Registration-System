@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Profile</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Patient Profile</h2>
+
+    <form onsubmit="return validateProfile()">
+
+        Name:
+        <input type="text" id="name" required>
+
+        Phone Number:
+        <input type="text" id="phone" required>
+
+        Email:
+        <input type="email" id="email" required>
+
+        Age:
+        <input type="number" id="age" required>
+
+        Gender:
+        <br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        Weight:
+        <input type="number" id="weight" required>
+
+        Common Issues:
+        <select id="issues">
+            <option value="">Select</option>
+            <option>BP</option>
+            <option>Sugar</option>
+            <option>Heart Problem</option>
+            <option>Skin Issue</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Save & Continue</button>
+    </form>
+</div>
+
+<script>
+function validateProfile() {
+
+    let phone = document.getElementById("phone").value;
+    let age = document.getElementById("age").value;
+
+    // Phone validation
+    if (phone.length != 10 || isNaN(phone)) {
+        alert("Enter valid 10-digit phone number");
+        return false;
+    }
+
+    // Age validation (if-else)
+    if (age < 1) {
+        alert("Enter valid age");
+        return false;
+    } else {
+        console.log("Valid age");
+    }
+
+    // Redirect to next page
+    window.location.href = "problem.html";
+    return false;
+}
+</script>
+
+</body>
+</html>

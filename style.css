@@ -1,0 +1,72 @@
+/* Basic Styling */
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0077b6;
+    color: white;
+    padding: 15px;
+    position: relative;
+}
+
+/* Dropdown Menu */
+.menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.menu button {
+    padding: 8px;
+    background: white;
+    border: none;
+}
+
+.dropdown {
+    display: none;
+    background: white;
+    position: absolute;
+    right: 0;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: lightgray;
+}
+
+/* Show dropdown on hover */
+.menu:hover .dropdown {
+    display: block;
+}
+
+/* Box Model Example */
+.container {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    background: white;
+}
+
+/* Button */
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+}

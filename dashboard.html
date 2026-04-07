@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <!-- Meta Tags (covered topic) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navigation Bar with Dropdown -->
+<div class="navbar">
+    <h2>Hospital Dashboard</h2>
+
+    <div class="menu">
+        <button onclick="showMessage()">Menu ▼</button>
+        <div class="dropdown">
+            <a href="profile.html">Profile</a>
+            <a href="problem.html">Select Problem</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <h3>Welcome to Hospital Management System</h3>
+
+    <p id="demo">Click below to start your registration process.</p>
+
+    <button onclick="startProcess()">Start Registration</button>
+</div>
+
+<script>
+    // Window object + alert
+    function showMessage() {
+        window.alert("Choose an option from menu");
+    }
+
+    // DOM manipulation
+    function startProcess() {
+        document.getElementById("demo").innerHTML = "Redirecting to problem selection...";
+        setTimeout(function() {
+            window.location.href = "problem.html";
+        }, 1500);
+    }
+</script>
+
+</body>
+</html>
